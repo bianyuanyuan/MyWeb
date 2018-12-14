@@ -13,12 +13,20 @@
         html{
             height: 100%;
         }
+        h3,h5,p{
+            animation: myfirst 2s infinite;//infinite 循环
+        }
+
+        @keyframes  myfirst {
+            from {opacity: 0;} /*opacity不透明度设置*/
+            to {opacity: 10;}
+        }
     </style>
 </head>
 <body>
     <h3>江雪</h3>
     <h5>唐 柳宗元</h5>
-    <p>千山鸟飞绝，......</p>
+    <p>千山鸟飞绝，</p>
     <p>万径人踪灭。</p>
     <p>孤舟蓑笠翁，</p>
     <p>独钓寒江雪。</p>
