@@ -14,22 +14,23 @@ page{
 }
 #spring{
     background-color: darkolivegreen;
-    animation:spring 10s infinite;
+    animation:spring 8.4s infinite;
 }
 #summer{
     background-color: aqua;
-    animation:summer 10s infinite;
+    animation:summer 8.4s infinite;
 }
 #fall{
     background-color: yellow;
-    animation:fall 10s infinite;
+    animation:fall 8.4s infinite;
 
 }
 #winter{
     /*background-color: black;*/
     background-image:url('../images/older.jpg');
+    background-size:100%;
     /*color: black;*/
-    animation:winter 10s infinite;
+    animation:winter 8.4s infinite;
 
 }
 
@@ -37,7 +38,7 @@ page{
     font-size:36px;
     /*color:black;*/
     display:block;
-    animation:zx 10s infinite;
+    animation:zx 8.4s infinite;
 
 }
 
@@ -45,7 +46,7 @@ page{
     0%{opacity:0}
     70%{opacity:0}
     80%{opacity:100}
-    90%{opacity:100}
+    90%{opacity:0}
     100%{opacity:0}
 }
 

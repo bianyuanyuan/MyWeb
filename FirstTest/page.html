@@ -4,11 +4,24 @@
     <meta charset="UTF-8">
     <title>四季变换</title>
     <link rel="stylesheet" type="text/css" href="css/page.css">
-    <!--<style type="text/css">-->
+    <!--<strcipt>-->
+        <!--function audioAutoPlay(id){-->
+        <!--var audio=document.getElementById(id);-->
+        <!--audio.play();-->
+        <!--document.addEventListener("WeixinJSBridgeReady",function(){-->
+            <!--audio.play();-->
+        <!--},false);-->
 
-    <!--</style>-->
+
+        <!--document.addEventListener('YixinJSBridgeReady',function(){-->
+            <!--audio.play();-->
+        <!--},false);-->
+
+        <!--}-->
+    <!--</strcipt>-->
 </head>
-<body>
+<body >
+    <audio id="bgm" src="wav/music.mp3"  preload="auto" autoplay="autoplay" >/*Chrome已经取消autoplay   loop="loop"*/</audio>
     <page id="spring">春</page>
     <page id="summer">夏</page>
     <page id="fall">秋</page>
