@@ -23,12 +23,30 @@ page{
 #fall{
     background-color: yellow;
     animation:fall 10s infinite;
+
 }
 #winter{
-    background-color: black;
-    color: white;
+    /*background-color: black;*/
+    background-image:url('../images/older.jpg');
+    /*color: black;*/
     animation:winter 10s infinite;
 
+}
+
+#zx{
+    font-size:36px;
+    /*color:black;*/
+    display:block;
+    animation:zx 10s infinite;
+
+}
+
+@keyframes zx{
+    0%{opacity:0}
+    70%{opacity:0}
+    80%{opacity:100}
+    90%{opacity:100}
+    100%{opacity:0}
 }
 
 @keyframes spring{
