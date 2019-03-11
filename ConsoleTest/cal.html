@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算器</title>
+    <script>
+        var x=prompt("请输入一个数");
+        var y=prompt("请输入一个数");
+        // var s=(x*1.0)+(y*1.0);
+        var op=prompt("请输入运算符(+、-、*、/)");
+        switch(op){
+            case '+':
+                alert(x+"与"+y+"的和为"+((x*1.0)+(y*1.0)));
+                break;
+            case '-':
+                alert(x+"与"+y+"的差为"+((x*1.0)-(y*1.0)));
+                break;
+            case '*':
+                alert(x+"与"+y+"的积为"+((x*1.0)*(y*1.0)));
+                break;
+            case '/':
+                alert(x+"与"+y+"的商为"+((x*1.0)/(y*1.0)));
+                break;
+            default:alert("运算符无法识别");
+            break;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
