@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>猜数字</title>
+    <style>
+        body {
+            font-size: 100px;
+        }
+    </style>
+
+</head>
+<body>
+    <p id="tili"></p>
+    <p id="demo"></p>
+
+</body>
+<script>
+    var answer=Math.random();
+    answer = Math.floor(answer*100)+1;
+    var number;
+    var m = 5;
+    while (1) {
+        document.getElementById("tili").innerHTML="还有"+m+"体力";
+        if (m == 0) {
+            document.getElementById("demo").innerHTML="游戏结束，答案是" + answer;
+            break;
+        }
+        number = prompt("请猜数字(1~100)");
+        m--;
+        if (number > answer) {
+            document.getElementById("demo").innerHTML=number+"大了";
+        } else if (number < answer) {
+            document.getElementById("demo").innerHTML=number+"小了";
+        } else {
+            document.getElementById("demo").innerHTML=number+"对了";
+            break;
+        }
+    }
+</script>
+</html>

@@ -3,19 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>第二杯半价</title>
+    <style>
+        body {
+            font-size: 50px;
+        }
+    </style>
     <script>
-        var price=10,cash;
-        var count=prompt(price+"元一杯,"+"请问您需要多少杯");
+        function isInteger(obj) {
+            return obj % 1 == 0;
+        }
 
-        if(isNaN(count)){
-            alert("请输入数字");
-        }else{
-            if(count%2==0){
-                cash=count*price*0.75;
-            }else{
-                cash=count*price*0.75+price*0.25;
+        var price = 10, cash;
+        var count = prompt(price + "元一杯," + "请问您需要多少杯");
+
+        if (isNaN(count)) {
+            document.write("这不是数字");
+        } else {
+            if (isInteger(count)) {
+                if (count % 2 == 0) {
+                    cash = count * price * 0.75;
+                } else {
+                    cash = count * price * 0.75 + price * 0.25;
+                }
+                document.write("你总共花费" + cash + "元");
+            } else {
+                document.write("必须是整数杯");
             }
-            alert("你总共花费"+cash+"元");
+
         }
 
     </script>
