@@ -11,46 +11,54 @@
 
 </head>
 <body>
-    <div id="message"></div>
+<div id="message"></div>
 </body>
 <script>
     var randNum = Math.random();
-    binggo=false;
-    function guess(){
-        if(binggo){
+
+    binggo = false;
+
+    function guess() {
+        var str;
+        if (binggo) {
             return;
         }
-        var num=prompt("请您猜色子");
-        var diff=Math.abs(randNum-num);
-        console.info("guessNum---"+num);
-        console.info("diff---"+diff);
-        var str;
-        if(num==randNum){
-            str="您猜中了"+"<img src=\"images/"+randNum+".png\"/>";
-            binggo=true;
-        }else if(num>randNum ){
-            if(diff>1){
-                str="您猜的太大了";
-            }else{
-                str="您猜的有点大";
+        var num = prompt("请您猜色子");
+        if (!Number.isInteger(num/1)||num<1||num>6) {
+            document.getElementById("message").innerHTML = "您的输入有误";
+            return;
+        }
+
+        console.info("guessNum---" + num);
+        var diff = Math.abs(randNum - num);
+        console.info("diff---" + diff);
+
+        if (num == randNum) {
+            str = "您猜中了" + "<img src=\"images/" + randNum + ".png\"/>";
+            binggo = true;
+        } else if (num > randNum) {
+            if (diff > 1) {
+                str = "您猜的太大了";
+            } else {
+                str = "您猜的有点大";
             }
 
-        }else{
-            if(diff>1){
-                str="您猜的太小了";
-            }else{
-                str="您猜的有点小";
+        } else {
+            if (diff > 1) {
+                str = "您猜的太小了";
+            } else {
+                str = "您猜的有点小";
             }
 
         }
-        document.getElementById("message").innerHTML=str;
+        document.getElementById("message").innerHTML = str;
     }
 
     randNum = Math.floor(randNum * 6) + 1;
     // document.write(randNum);
     // document.write("<img src=\"images/"+randNum+".png\"/>");
-    console.info("randNum---"+randNum);
-    for(var i=1;i<=3;i++){
+    console.info("randNum---" + randNum);
+    for (var i = 1; i <= 3; i++) {
         guess();
     }
 

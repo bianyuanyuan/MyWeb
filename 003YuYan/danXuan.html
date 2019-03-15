@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>单选题</title>
+    <style>
+        body {
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+
+</body>
+<script>
+    function getAnswer(){
+        var random = Math.floor(Math.random() * 4) + 1;
+        var str=String.fromCharCode(random+64);
+        document.write(str);
+    }
+    function getAnsers(){
+        getAnswer();
+        getAnswer();
+        getAnswer();
+        getAnswer();
+        getAnswer();
+        document.write("<br>");
+    }
+
+    getAnsers();
+    getAnsers();
+    getAnsers();
+    getAnsers();
+</script>
+</html>
