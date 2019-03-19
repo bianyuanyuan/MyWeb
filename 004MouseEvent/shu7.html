@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zn">
+<head>
+    <meta charset="UTF-8">
+    <title>数7</title>
+    <style>
+        html, body {
+            height: 100%;
+            font-size: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body onClick="goGoGo()">
+
+</body>
+<script>
+    var num = 1;
+
+    function goGoGo() {
+        // document.body.innerHTML+="<br>123";
+
+        if (num % 7 == 0) {
+            document.body.innerHTML = num + "过";
+        } else if (num % 10 == 7) {
+            document.body.innerHTML = num + "过";
+        } else if ((Math.floor(num / 10))%10 == 7) {
+            document.body.innerHTML = num + "过";
+        } else {
+            document.body.innerHTML = num;
+        }
+        num++;
+    }
+</script>
+</html>
