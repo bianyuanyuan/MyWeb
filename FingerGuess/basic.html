@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>猜拳</title>
+</head>
+<body onload="go()">
+
+</body>
+
+<script>
+
+    function go() {
+        var n = Math.random();
+        // var n = 3 * Math.random();
+        n = Math.floor(n * 3) + 1;
+        if (n == 1) {
+            document.body.innerHTML = "<image src='images/rock.png'></image>";
+
+        } else if (n == 2) {
+            document.body.innerHTML = "<image src='images/scissors.png'></image>";
+        } else {
+            document.body.innerHTML = "<image src='images/paper.png'></image>";
+        }
+    }
+</script>
+</html>
