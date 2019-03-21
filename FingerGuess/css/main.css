@@ -1,0 +1,35 @@
+#container {
+    width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    border: black solid 10px;
+}
+
+#container > div {
+    width: 400px;
+    height: 400px;
+    float: left;
+}
+
+#mine {
+    background-color: lightcoral;
+}
+
+#computer {
+    background-color: lightblue;
+}
+
+#computerChoice > IMG {
+    transform: scaleX(-1);
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+}
+
+#container > #result {
+    font-size: 100px;
+    text-align: center;
+    width: 800px;
+}
